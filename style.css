@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #aaaaaa;
+}
+
+.header {
+    width: 100%;
+    background-color: rgba(50, 50, 50, 0.9);
+    height: 10vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 4rem;
+    font-family: "Poppins";
+    font-weight: bold;
+}
+
+.r {
+    padding: 5px;
+    color: rgba(255, 62, 48, 1);
+}
+
+.g {
+    padding: 5px;
+    color: rgba(26, 162, 96, 1);
+}
+
+.b {
+    padding: 5px;
+    color: rgba(23, 107, 239, 1);
+}
+
+
+.parent {
+    height: 70vh;
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    animation-name: intro;
+    animation-duration: 3s;
+    transition-timing-function: ease-in;
+}
+
+#redBox {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    background-color: rgba(255, 62, 48, 1);
+    transition-property: border-radius;
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
+}
+
+#redBox:hover {
+    border-radius: 50%;
+}
+
+#redBox:active {
+    background-color: white;
+}
+
+#greenBox {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    background-color: rgba(26, 162, 96, 1);
+    transition-property: transform;
+    transition-duration: 2s;
+    transition-timing-function: ease-out;
+}
+
+#greenBox:hover {
+    transform: rotateY(360deg);
+}
+
+#greenBox:active {
+    border-radius: 50%;
+}
+
+#blueBox {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    background-color: rgba(23, 107, 239, 1);
+    transition-property: height;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+}
+
+#blueBox:hover {
+    height: 50vh;
+}
+
+#blueBox:active {
+    background-color: #aaaaaa;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button button {
+    background-color: rgba(247, 181, 41, 1);
+    border: none;
+    color: black;
+    padding: 25px 50px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    transition-property: border-radius;
+    transition-duration: 0.25s;
+    transition-timing-function: ease-in-out;
+}
+.button button:active {
+    background-color: black;
+    color: white;
+}
+
+.button button:hover {
+    border-radius: 25px;
+}
+
+
+@keyframes intro {
+    0% {left: -100%;}
+    100% {left: 0;}
+}
+
